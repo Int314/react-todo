@@ -21,7 +21,7 @@ function App() {
     if (name === "") return;
 
     setTodos((prevTodos) => {
-      return [...prevTodos, { id: uuidv4(), name: name, completed: false }];
+      return [{ id: uuidv4(), name: name, completed: false }, ...prevTodos];
     });
     todoNameRef.current.value = null;
   };
